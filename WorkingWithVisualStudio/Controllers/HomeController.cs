@@ -5,11 +5,9 @@ using System.Linq;
 namespace WorkingWithVisualStudio.Controllers {
     public class HomeController : Controller
     {
-        SimpleRepository repository = SimpleRepository.SharedRepository;
+        public IRepository repository = SimpleRepository.SharedRepository;
 
-        public IActionResult Index()
-            => View(SimpleRepository.SharedRepository.Products
-                        .Where(p => p?.Price < 50));
+        public IActionResult Index() => View(repository.Products);
 
         [HttpGet]
         public IActionResult AddProduct() => View(new Product());
