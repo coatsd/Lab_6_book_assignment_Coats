@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using WorkingWithVisualStudio.Models;
 
 namespace WorkingWithVisualStudio.Tests
 {
-    public class ProductTestData :IEnumerable<object[]>
+    public class ProductTestData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {
